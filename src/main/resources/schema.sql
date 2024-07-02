@@ -56,8 +56,10 @@ CREATE TABLE if not exists order_item (
     order_id BIGINT NOT NULL,
     item_id BIGINT NOT NULL,
     quantity INT NOT NULL,
+    restock_order_id BIGINT,
     FOREIGN KEY (order_id) REFERENCES orders(id),
-    FOREIGN KEY (item_id) REFERENCES item(id)
+    FOREIGN KEY (item_id) REFERENCES item(id),
+    FOREIGN KEY (restock_order_id) REFERENCES restock_order(id)
 );
 
 CREATE TABLE if not exists supplier (
