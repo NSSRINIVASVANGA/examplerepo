@@ -18,3 +18,7 @@ INSERT INTO order_item (order_id, item_id, quantity) VALUES (2, 1, 5);
 -- Insert initial restock orders
 INSERT INTO restock_order (supplier_id, order_date, status) VALUES (1, '2024-07-01', 'ORDERED');
 INSERT INTO restock_order (supplier_id, order_date, status) VALUES (2, '2024-07-02', 'RECEIVED');
+
+-- Insert initial restock order items
+INSERT INTO order_item (restock_order_id, item_id, quantity) VALUES (1, 1, 50);
+INSERT INTO order_item (restock_order_id, item_id, quantity) VALUES (2, 2, 30);
